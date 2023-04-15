@@ -7,6 +7,7 @@ import server.models.RegistrationForm;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.ConnectException;
 import java.net.Socket;
 import java.util.ArrayList;
 
@@ -89,6 +90,7 @@ public class Controleur {
             ex.printStackTrace();
         } catch (ClassNotFoundException ex) {
             System.out.println("Erreur: Classe Introuvable");
+
         } catch (IllegalArgumentException ex) {
             switch (erreur) {
                 case(1):
